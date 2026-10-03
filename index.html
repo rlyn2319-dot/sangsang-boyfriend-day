@@ -21,13 +21,11 @@ p{font-size:17px;line-height:1.75}.small{font:12px Arial;color:#94717a}
 .photo-frame,.favorite-photo{background:white;padding:10px;box-shadow:0 14px 35px #50283226;margin:18px auto;max-width:580px}.memory-photo,.favorite-photo img{width:100%;max-height:65vh;object-fit:contain;display:block}.photo-caption,.favorite-caption{margin:17px 8px;font-style:italic;font-size:20px;line-height:1.5}
 .dots span{display:inline-block;width:8px;height:8px;background:#ddc5cc;border-radius:50%;margin:4px}.dots .active-dot{background:#a95870}
 .question{font-size:23px;line-height:1.5;margin:28px 0}.question-option{display:block;width:min(430px,100%);margin:10px auto}.progress{height:7px;background:#ead9de;border-radius:99px;overflow:hidden}.progress i{display:block;height:100%;background:#a95870}
-.letter-box{background:#fffaf4;border:1px solid #ead7d1;border-radius:9px;padding:28px 22px;text-align:left;line-height:1.8}.signature{text-align:right;font-style:italic}.hidden{display:none!important}.final-heart{font-size:58px}
+.letter-box{background:#fffaf4;border:1px solid #ead7d1;border-radius:9px;padding:28px 22px;text-align:left;line-height:1.8}.signature{text-align:right;font-style:italic}.video-frame{background:white;padding:10px;box-shadow:0 14px 35px #50283226;margin:22px auto;max-width:580px;border-radius:14px}
+.video-frame video{width:100%;display:block;max-height:65vh;border-radius:8px;background:#1f1719}
+.hidden{display:none!important}.final-heart{font-size:58px}
+
 @media(max-width:520px){.card{padding:29px 15px}.moods,.notes{grid-template-columns:1fr}.env-flap{border-left-width:45vw;border-right-width:45vw}p{font-size:16px}}
-
-.video-frame{background:white;padding:10px;border-radius:20px;box-shadow:0 14px 35px #50283226;margin:25px auto;max-width:600px}
-.video-frame video{display:block;width:100%;max-height:65vh;border-radius:14px;background:#2b2023}
-.video-caption{font-style:italic;color:#805461}
-
 </style>
 </head>
 <body>
@@ -40,34 +38,34 @@ p{font-size:17px;line-height:1.75}.small{font:12px Arial;color:#94717a}
 
 <section class="page" id="page4"><div class="card"><div class="kicker">little pieces of us</div><h2>Do you remember this?</h2><div class="photo-frame"><img id="memoryPhoto" class="memory-photo" src="photo1.jpg" alt="Our memory"><div id="memoryCaption" class="photo-caption"></div></div><div id="photoDots" class="dots"></div><button class="btn" onclick="memoryAnswer(true)">YES, I REMEMBER ❤️</button><button class="btn alt" onclick="memoryAnswer(false)">HMM… MAYBE 😭</button><p id="memoryMessage" class="answer-msg"></p><button id="nextMemory" class="btn hidden" onclick="nextMemory()">Next memory →</button></div></section>
 
-<section class="page" id="page5"><div class="card"><div class="kicker">things i don't always say</div><h2>Tap the little cards ♡</h2><div class="notes"><button class="note" onclick="openNote(this,'I love the way you care about little things.')">💌<br>Tap me</button><button class="note" onclick="openNote(this,'Your voice is still one of my favourite things about you.')">🎀<br>A tiny secret</button><button class="note" onclick="openNote(this,'Sometimes I just want to sit beside you and do absolutely nothing.')">🌷<br>Something soft</button><button class="note" onclick="openNote(this,'Yes… I still want your hugs. A lot. 🤭')">🧸<br>Important information</button></div><button class="btn" onclick="goTo('5b')">Listen to my song 🎶 →</button></div></section>
+<section class="page" id="page5"><div class="card"><div class="kicker">things i don't always say</div><h2>Tap the little cards ♡</h2><div class="notes"><button class="note" onclick="openNote(this,'I love the way you care about little things.')">💌<br>Tap me</button><button class="note" onclick="openNote(this,'Your voice is still one of my favourite things about you.')">🎀<br>A tiny secret</button><button class="note" onclick="openNote(this,'Sometimes I just want to sit beside you and do absolutely nothing.')">🌷<br>Something soft</button><button class="note" onclick="openNote(this,'Yes… I still want your hugs. A lot. 🤭')">🧸<br>Important information</button></div>
 
+<button class="btn" onclick="goTo(6)">Hear my song →</button></div></section>
 
-<section class="page" id="page5b"><div class="card">
-<div class="decor d1">🎶</div><div class="decor d2">🎀</div>
-<div class="kicker">a little something from me</div>
+<section class="page" id="page6"><div class="card">
+<div class="decor d1">🎀</div><div class="decor d2">🎶</div>
+<div class="kicker">a little something from Rose</div>
 <h2>A song for you ♡</h2>
-<p>Because sometimes a song says the things I can't quite put into words.</p>
-<div class="video-frame">
-<video controls playsinline preload="metadata">
-<source src="song.mp4" type="video/mp4">
-</video>
-</div>
-<p class="video-caption">I sang this one for you, Sangsang. 🤍🎶</p>
-<button class="btn" onclick="goTo('6')">Continue to the boyfriend test →</button>
+<p>I wanted to leave you a little piece of me too.</p>
+<div class="video-frame"><video controls playsinline preload="metadata">
+<source src="singing.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video></div>
+<p class="photo-caption">No perfect performance… just me, singing something for you. ❤️</p>
+<button class="btn" onclick="goTo(7)">Now, boyfriend test →</button>
 </div></section>
 
-<section class="page" id="page6"><div class="card"><div class="kicker">rose's boyfriend test</div><div class="progress"><i id="quizProgress"></i></div><div id="question" class="question"></div><div id="options"></div><div id="quizMessage" class="quiz-msg"></div><button id="nextQuestion" class="btn hidden" onclick="nextQuestion()">Next question →</button></div></section>
+<section class="page" id="page7"><div class="card"><div class="kicker">rose's boyfriend test</div><div class="progress"><i id="quizProgress"></i></div><div id="question" class="question"></div><div id="options"></div><div id="quizMessage" class="quiz-msg"></div><button id="nextQuestion" class="btn hidden" onclick="nextQuestion()">Next question →</button></div></section>
 
-<section class="page" id="page7"><div class="card"><div class="kicker">okay… be honest</div><h2>A few important questions.</h2><p>Do you secretly smile when you see my name?</p><button class="btn" onclick="answerQuestion('smile',true)">YES ❤️</button><button class="btn alt" onclick="answerQuestion('smile',false)">NO 🙄</button><p id="smileAnswer" class="answer-msg"></p><p>Would you hug me right now if I suddenly appeared beside you?</p><button class="btn" onclick="answerQuestion('hug',true)">YES 🫂</button><button class="btn alt" onclick="answerQuestion('hug',false)">NO 😭</button><p id="hugAnswer" class="answer-msg"></p><p>Do I make your ordinary days a little better?</p><button class="btn" onclick="answerQuestion('days',true)">YES ❤️</button><button class="btn alt" onclick="answerQuestion('days',false)">NO 😭</button><p id="daysAnswer" class="answer-msg"></p><button class="btn" onclick="goTo(8)">Okay… one more →</button></div></section>
+<section class="page" id="page8"><div class="card"><div class="kicker">okay… be honest</div><h2>A few important questions.</h2><p>Do you secretly smile when you see my name?</p><button class="btn" onclick="answerQuestion('smile',true)">YES ❤️</button><button class="btn alt" onclick="answerQuestion('smile',false)">NO 🙄</button><p id="smileAnswer" class="answer-msg"></p><p>Would you hug me right now if I suddenly appeared beside you?</p><button class="btn" onclick="answerQuestion('hug',true)">YES 🫂</button><button class="btn alt" onclick="answerQuestion('hug',false)">NO 😭</button><p id="hugAnswer" class="answer-msg"></p><p>Do I make your ordinary days a little better?</p><button class="btn" onclick="answerQuestion('days',true)">YES ❤️</button><button class="btn alt" onclick="answerQuestion('days',false)">NO 😭</button><p id="daysAnswer" class="answer-msg"></p><button class="btn" onclick="goTo(9)">Okay… one more →</button></div></section>
 
-<section class="page" id="page8"><div class="card"><div class="kicker">no more teasing</div><h2>One honest question.</h2><p>Are you happy that our paths crossed?</p><button class="btn" onclick="seriousAnswer(true)">YES ❤️</button><button class="btn alt" onclick="seriousAnswer(false)">NO 😭</button><p id="seriousMessage" class="answer-msg"></p><button id="seriousNext" class="btn hidden" onclick="goTo(9)">One last thing… →</button></div></section>
+<section class="page" id="page9"><div class="card"><div class="kicker">no more teasing</div><h2>One honest question.</h2><p>Are you happy that our paths crossed?</p><button class="btn" onclick="seriousAnswer(true)">YES ❤️</button><button class="btn alt" onclick="seriousAnswer(false)">NO 😭</button><p id="seriousMessage" class="answer-msg"></p><button id="seriousNext" class="btn hidden" onclick="goTo(10)">One last thing… →</button></div></section>
 
-<section class="page" id="page9"><div class="card"><div class="kicker">saved this one for last</div><h2>I saved my favourite one for the end…</h2><div class="favorite-photo"><img src="photo7.jpg" alt="Our favourite photo"><div class="favorite-caption">Some pictures are more than pictures. They become little pieces of a story. ❤️</div></div><button class="btn" onclick="showLetter()">Open my letter 💌</button><div id="letterSection" class="hidden"><div class="letter-box"><h3>A little letter for you</h3><p><b>My dear Sang,</b></p><p>If you've reached the end, then you've officially survived all my little questions, teasing and surprises. 🤭❤️</p><p>I just wanted to leave you with something a little more personal. I don't always know how to put everything I feel into words, but I hope you know how much you mean to me.</p><p>I love all the little things about us — our conversations, our random moments, the laughter, the hugs I always seem to want more of, and even the imperfect moments that have taught us to understand each other better.</p><p>You've become such a special part of my life, and I'm genuinely grateful that our paths crossed. I don't expect us to be perfect. I just want us to keep choosing each other, being honest with each other, growing together and making many more little memories along the way.</p><p>And this photo I saved for the end is one of my favourites because whenever I look at it, I don't just see a picture. I see <b>us</b> — and that's something I'll always treasure. 🥺❤️</p><p>So, <b>Happy Boyfriend Day, Sangsang.</b></p><p><b>Thank you for being you, and thank you for being my person.</b></p><p class="signature">With love,<br><b>Your Rose 🌹</b></p></div><button class="btn" onclick="goTo(10)">One last question ❤️</button></div></div></section>
+<section class="page" id="page10"><div class="card"><div class="kicker">saved this one for last</div><h2>I saved my favourite one for the end…</h2><div class="favorite-photo"><img src="photo7.jpg" alt="Our favourite photo"><div class="favorite-caption">Some pictures are more than pictures. They become little pieces of a story. ❤️</div></div><button class="btn" onclick="showLetter()">Open my letter 💌</button><div id="letterSection" class="hidden"><div class="letter-box"><h3>A little letter for you</h3><p><b>My dear Sang,</b></p><p>If you've reached the end, then you've officially survived all my little questions, teasing and surprises. 🤭❤️</p><p>I just wanted to leave you with something a little more personal. I don't always know how to put everything I feel into words, but I hope you know how much you mean to me.</p><p>I love all the little things about us — our conversations, our random moments, the laughter, the hugs I always seem to want more of, and even the imperfect moments that have taught us to understand each other better.</p><p>You've become such a special part of my life, and I'm genuinely grateful that our paths crossed. I don't expect us to be perfect. I just want us to keep choosing each other, being honest with each other, growing together and making many more little memories along the way.</p><p>And this photo I saved for the end is one of my favourites because whenever I look at it, I don't just see a picture. I see <b>us</b> — and that's something I'll always treasure. 🥺❤️</p><p>So, <b>Happy Boyfriend Day, Sangsang.</b></p><p><b>Thank you for being you, and thank you for being my person.</b></p><p class="signature">With love,<br><b>Your Rose 🌹</b></p></div><button class="btn" onclick="goTo(11)">One last question ❤️</button></div></div></section>
 
-<section class="page" id="page10"><div class="card"><div class="final-heart">💌</div><div class="kicker">the final question</div><h2>If you could go back to the beginning…</h2><p>Would you still choose me?</p><button class="btn" onclick="finish()">YES ❤️</button><button class="btn alt" onclick="finish()">OF COURSE 🤍</button></div></section>
+<section class="page" id="page11"><div class="card"><div class="final-heart">💌</div><div class="kicker">the final question</div><h2>If you could go back to the beginning…</h2><p>Would you still choose me?</p><button class="btn" onclick="finish()">YES ❤️</button><button class="btn alt" onclick="finish()">OF COURSE 🤍</button></div></section>
 
-<section class="page" id="page11"><div class="card"><div class="final-heart">❤️</div><div class="kicker">for my favourite person</div><h1>Happy Boyfriend Day, Sangsang ❤️</h1><p>Thank you for being you, and thank you for being my person.</p><p>I hope we keep making little memories that become our favourite ones.</p><p style="font-size:24px">With love,<br><b>Your Rose 🌹</b></p><p class="small">Come back whenever you miss me. ♡</p><div style="margin-top:20px;font-size:25px">🎀 💌 🌷 ✦ 🦋 ♡ ✦ 🧸 💕</div></div></section>
+<section class="page" id="page12"><div class="card"><div class="final-heart">❤️</div><div class="kicker">for my favourite person</div><h1>Happy Boyfriend Day, Sangsang ❤️</h1><p>Thank you for being you, and thank you for being my person.</p><p>I hope we keep making little memories that become our favourite ones.</p><p style="font-size:24px">With love,<br><b>Your Rose 🌹</b></p><p class="small">Come back whenever you miss me. ♡</p><div style="margin-top:20px;font-size:25px">🎀 💌 🌷 ✦ 🦋 ♡ ✦ 🧸 💕</div></div></section>
 
 <script>
 const memories=[
@@ -85,7 +83,7 @@ const quiz=[
 ["Would you choose another date with me?",["YES ❤️","Definitely 💕","NO 😭"],["Good. I've already started planning. 🤭","That's the answer I wanted. ❤️","Your answer has been forwarded to Rose. 👀"]]
 ];
 let memoryIndex=0,quizIndex=0;
-function goTo(n){document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));document.getElementById("page"+n).classList.add("active");window.scrollTo(0,0);if(n===4)loadMemory();if(n===6)loadQuiz()}
+function goTo(n){document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));document.getElementById("page"+n).classList.add("active");window.scrollTo(0,0);if(n===4)loadMemory();if(n===7)loadQuiz()}
 function openEnvelope(){let e=document.getElementById("envelope");if(e.classList.contains("open"))return;e.classList.add("open");setTimeout(()=>goTo(2),1100)}
 function scared(){document.getElementById("warning").textContent="Too late. 🤭 You're already here.";setTimeout(()=>goTo(3),1000)}
 function mood(t){document.getElementById("moodResponse").textContent={romantic:"Aww… someone's feeling soft today. 💕",silly:"Oh no. I should probably hide the serious questions. 😂",missing:"Then you definitely came to the right place. 🫂",trouble:"I knew you'd choose this one. 😏"}[t]}
@@ -95,11 +93,11 @@ function nextMemory(){if(memoryIndex<memories.length-1){memoryIndex++;loadMemory
 function openNote(e,m){e.textContent=m;e.classList.add("open")}
 function loadQuiz(){let q=quiz[quizIndex];document.getElementById("question").textContent=q[0];document.getElementById("options").innerHTML=q[1].map((o,i)=>`<button class="btn question-option" onclick="quizAnswer(${i})">${o}</button>`).join("");document.getElementById("quizMessage").textContent="";document.getElementById("nextQuestion").classList.add("hidden");document.getElementById("quizProgress").style.width=((quizIndex/quiz.length)*100)+"%"}
 function quizAnswer(i){document.getElementById("quizMessage").textContent=quiz[quizIndex][2][i];document.getElementById("nextQuestion").classList.remove("hidden")}
-function nextQuestion(){if(quizIndex<quiz.length-1){quizIndex++;loadQuiz()}else goTo(7)}
+function nextQuestion(){if(quizIndex<quiz.length-1){quizIndex++;loadQuiz()}else goTo(8)}
 function answerQuestion(t,y){let r={smile:["I knew it. 🤭❤️","Hmm… suspicious answer. 😌"],hug:["Good. Come here. 🫂❤️","I'll give you five seconds to reconsider. 😂"],days:["That makes me very happy. 🥺❤️","I'm pretending I didn't hear that. 😭"]};document.getElementById(t+"Answer").textContent=y?r[t][0]:r[t][1]}
 function seriousAnswer(y){document.getElementById("seriousMessage").textContent=y?"Then I'm really glad it was us. 🥺❤️":"I'm pretending I didn't hear that. Try again. 🤭";document.getElementById("seriousNext").classList.remove("hidden")}
 function showLetter(){document.getElementById("letterSection").classList.remove("hidden");document.getElementById("letterSection").scrollIntoView({behavior:"smooth"})}
-function finish(){setTimeout(()=>goTo(11),500)}
+function finish(){setTimeout(()=>goTo(12),500)}
 </script>
 </body>
 </html>
